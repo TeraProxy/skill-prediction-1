@@ -20,7 +20,7 @@ module.exports = {
 		9010100: true, // Racial teleport
 		9020100: { fixedSpeed: true }, // Racial buff 1
 		9030100: { fixedSpeed: true }, // Racial buff 2
-		9100100: { fixedSpeed: true } // Apex Urgency
+		9100100: { fixedSpeed: true }  // Apex Urgency
 	},
 	0: { // Warrior
 		1: { // Combo Attack
@@ -42,7 +42,7 @@ module.exports = {
 		4: { // Rain of Blows
 			0: {
 				noInterrupt: [1, 2, 3, 4, 5, 8, 9, 10, 11, 12, 13, 16, 17, 19, 22, 23, 28, 29, 30, 31, 34, 35, 36, 37, 38, 39, 41, 42],
-				categoryChains: { 550: 30 }
+				categoryChains: { 550: 30 } // ToB, RoB, DfA, PB, Leaping, Charging, Vortex, Combative, RF, Cascade, TC, BD, Scythe, Reaping, BW, Aerial, Frenzy
 			},
 			30: true
 		},
@@ -73,7 +73,7 @@ module.exports = {
 			0: { noRetry: true }
 		},
 		16: { // Charging Slash
-			'*': { noInterrupt: [40] },
+			'*': { noInterrupt: [2, 10, 32, 40, 41] },
 			0: {
 				fixedSpeed: true,
 				length: 1100,
@@ -112,6 +112,9 @@ module.exports = {
 				onlyTarget: true
 			}
 		},
+		23: { // Spinning Counter
+			0: { requiredBuff: 100700 }
+		},
 		24: { // Smoke Aggressor
 			0: { fixedSpeed: true }
 		},
@@ -134,10 +137,10 @@ module.exports = {
 			},
 			0: {
 				categoryChains: {
-					1011: 30,
-					1012: 30,
-					1018: 30,
-					1040: 30
+					1011: 30, // Poison Blade
+					1012: 30, // Leaping Strike
+					1018: 30, // Combative Strike
+					1040: 30  // Blade Waltz
 				}
 			},
 			30: true
@@ -148,8 +151,8 @@ module.exports = {
 				noInterrupt: [1, 2, 3, 4, 5, 8, 9, 10, 11, 12, 13, '16-0', 18, '19-0', 21, 22, 23, 27, 29, 30, 34, 35, 36, 37, 38, 41, 42],
 				interruptibleWithAbnormal: { 102010: 3 },
 				categoryChains: {
-					1032: 30,
-					550: 30
+					1032: 30, // Cross Parry
+					550: 30   // ToB, RoB, DfA, PB, Leaping, Charging, Vortex, Combative, RF, Cascade, TC, BD, Scythe, Reaping, BW, Aerial, Frenzy
 				}
 			},
 			30: true
@@ -159,12 +162,12 @@ module.exports = {
 			0: {
 				noInterrupt: [1, 3, 5, 8, 9, 10, 13, 16, 17, 18, 19, 21, 22, 23, 27, 28, 30, 31, 34, 35, 38, 39, 41, 42],
 				categoryChains: {
-					1002: 30,
-					1004: 30,
-					1011: 30,
-					1012: 30,
-					1029: 30,
-					1040: 30
+					1002: 30, // Evasive Roll
+					1004: 30, // Rain of Blows
+					1011: 30, // Poison Blade
+					1012: 30, // Leaping Strike
+					1029: 30, // Blade Draw
+					1040: 30  // Blade Waltz
 				}
 			},
 			30: true
@@ -174,7 +177,7 @@ module.exports = {
 				noInterrupt: [1, 2, 3, 5, 8, 9, 10, 11, 12, 13, 16, 17, 19, 21, 22, 23, 27, 28, 29, 30, 33, 34, 35, 37, 38, 39, 41, 42],
 				hasChains: true
 			},
-			0: { categoryChains: { 550: 30 } },
+			0: { categoryChains: { 550: 30 } }, // ToB, RoB, DfA, PB, Leaping, Charging, Vortex, Combative, RF, Cascade, TC, BD, Scythe, Reaping, BW, Aerial, Frenzy
 			30: true
 		},
 		32: { // Cross Parry
@@ -192,15 +195,15 @@ module.exports = {
 		},
 		36: { // Rain of Blows (Deadly Gamble)
 			'*': { hasChains: true },
-			0: { categoryChains: { 550: 30 } },
+			0: { categoryChains: { 550: 30 } }, // ToB, RoB, DfA, PB, Leaping, Charging, Vortex, Combative, RF, Cascade, TC, BD, Scythe, Reaping, BW, Aerial, Frenzy
 			30: true
 		},
 		37: { // Blade Draw (Deadly Gamble)
 			'*': { hasChains: true },
 			0: {
 				categoryChains: {
-					1032: 30,
-					550: 30
+					1032: 30, // Cross Parry
+					550: 30   // ToB, RoB, DfA, PB, Leaping, Charging, Vortex, Combative, RF, Cascade, TC, BD, Scythe, Reaping, BW, Aerial, Frenzy
 				}
 			},
 			30: true
@@ -209,12 +212,12 @@ module.exports = {
 			'*': { hasChains: true },
 			0: {
 				categoryChains: {
-					1002: 30,
-					1004: 30,
-					1011: 30,
-					1012: 30,
-					1029: 30,
-					1040: 30
+					1002: 30, // Evasive Roll
+					1004: 30, // Rain of Blows
+					1011: 30, // Poison Blade
+					1012: 30, // Leaping Strike
+					1029: 30, // Blade Draw
+					1040: 30  // Blade Waltz
 				}
 			},
 			30: true
@@ -223,10 +226,10 @@ module.exports = {
 			'*': { hasChains: true },
 			0: {
 				categoryChains: {
-					1011: 30,
-					1012: 30,
-					1018: 30,
-					1040: 30
+					1011: 30, // Poison Blade
+					1012: 30, // Leaping Strike
+					1018: 30, // Combative Strike
+					1040: 30  // Blade Waltz
 				}
 			},
 			30: true
@@ -240,14 +243,14 @@ module.exports = {
 			},
 			10: {
 				triggerAbnormal: { 104101: 800 },
-				categoryChains: { 560: 11 },
+				categoryChains: { 560: 11 }, // All skills except Aerial Scythe and Blade Frenzy
 				noRetry: true
 			},
 			11: { triggerAbnormal: { 104101: 800 } },
 			12: true,
 			20: {
 				triggerAbnormal: { 104101: 800 },
-				categoryChains: { 560: 21 },
+				categoryChains: { 560: 21 }, // All skills except Aerial Scythe and Blade Frenzy
 				noRetry: true
 			},
 			21: { triggerAbnormal: { 104101: 800 } },
@@ -261,7 +264,7 @@ module.exports = {
 			},
 			0: {
 				triggerAbnormal: { 105100: 1800 },
-				categoryChains: { 560: 30 }
+				categoryChains: { 560: 30 } // All skills except Aerial Scythe and Blade Frenzy
 			},
 			30: { triggerAbnormal: { 105100: 1800 } },
 			31: { consumeAbnormal: 105100 }
@@ -273,9 +276,9 @@ module.exports = {
 			},
 			0: {
 				categoryChains: {
-					1002: 30,
-					1030: 30,
-					2041: 30
+					1002: 30, // Evasive Roll
+					1030: 30, // Scythe
+					2041: 30  // Aerial Scythe (2nd part)
 				}
 			},
 			30: true
@@ -487,18 +490,28 @@ module.exports = {
 				}
 			},
 			1: true,
-			2: { chains: { 14: 30 } },
+			2: {
+				chains: {
+					14: 30,
+					27: 30
+				}
+			},
 			30: true
 		},
 		3: { // Whirlwind
 			'*': {
-				noInterrupt: [1, 2, 3, 4, 6, 8, 10, 12, 13, 14, 15, 16, 17, 24, 25],
-				abnormals: {
-					23080: { speed: 1.25 }
-				}
-			},
+					noInterrupt: [1, 2, 3, 4, 6, 8, 10, 12, 13, 14, 15, 16, 17, 24, 25],
+					abnormals: {
+						23080: { speed: 1.25 }
+					}
+				},
 			0: { categoryChains: { 3027: 30 } },
-			30: true
+			1: true,
+			2: {
+				noInterrupt: [1, 2, 3, 4, 6, 8, 9, 10, 12, 13, 14, 15, 16, 17, 18, 21, 22, 23, 24, 25, 26, 27, 28],
+				abnormalChains: { 301604: 30 }
+			},
+			30: { requiredBuff: 301604 }
 		},
 		4: { // Evasive Roll
 			'*': {
@@ -521,6 +534,7 @@ module.exports = {
 			'*': { hasChains: true },
 			0: {
 				noInterrupt: ['1-0', '1-1', '1-2', 4, 6, 8, 10, '14-0', '14-1', 17, 25],
+				abnormalChains: { 301604: 30 },
 				chains: {
 					1: 30,
 					2: 30,
@@ -531,8 +545,7 @@ module.exports = {
 					14: 30,
 					15: 30,
 					16: 30,
-					24: 30,
-					27: 30 // Workaround - TODO: Emulate abnormal 301604
+					24: 30
 				}
 			},
 			30: true
@@ -552,7 +565,12 @@ module.exports = {
 				}
 			},
 			0: { categoryChains: { 3027: 30 } },
-			30: true
+			1: true,
+			2: {
+				noInterrupt: [1, 2, 3, 4, 6, 8, 9, 10, 12, 13, 14, 15, 16, 17, 18, 21, 22, 23, 24, 25, 26, 27, 28],
+				abnormalChains: { 301604: 30 }
+			},
+			30: { requiredBuff: 301604 }
 		},
 		13: { // Stunning Backhand
 			0: true
@@ -596,12 +614,12 @@ module.exports = {
 			'*': { hasChains: true },
 			0: {
 				noInterrupt: [1, 2, 3, 4, 6, 9, 12, 13, 15, 17, 22, 23],
+				abnormalChains: { 301604: 30 },
 				categoryChains: {
 					3008: 30,
 					3024: 30,
 					3025: 30,
-					3026: 30,
-					3027: 30 // Workaround - TODO: Emulate abnormal 301604
+					3026: 30
 				}
 			},
 			30: true
@@ -610,6 +628,7 @@ module.exports = {
 			'*': { hasChains: true },
 			0: {
 				noInterrupt: ['1-0', '1-1', '1-2', 4, 6, 14, 16, 17, 22, 24, 26],
+				abnormalChains: { 301604: 30 },
 				chains: {
 					1: 30,
 					2: 30,
@@ -627,6 +646,7 @@ module.exports = {
 		25: { // Ultimate Overhand Strike
 			'*': { hasChains: true },
 			0: {
+				abnormalChains: { 301604: 30 },
 				chains: {
 					1: 30,
 					2: 30,
@@ -637,8 +657,7 @@ module.exports = {
 					14: 30,
 					15: 30,
 					16: 30,
-					24: 30,
-					27: 30 // Workaround - TODO: Emulate abnormal 301604
+					24: 30
 				}
 			},
 			30: true
@@ -662,15 +681,15 @@ module.exports = {
 			'*': {
 				noInterrupt: ['27-31'],
 				hasChains: true,
-				noRetry: true
-			},
-			0: {
+				noRetry: true,
 				triggerAbnormal: {
 					301600: 4000,
-					301603: 5000
+					301603: 5000,
+					301604: 5000
 				},
-				categoryChains: { 9999: 30 }
+				abnormalChains: { 301603: 31 }
 			},
+			0: { categoryChains: { 9999: 30 } },
 			30: { triggerAbnormal: { 301603: 5000 } },
 			31: {
 				consumeAbnormal: [301600, 301603],
@@ -1393,6 +1412,7 @@ module.exports = {
 		2: { // Regeneration Circle
 			0: {
 				abnormals: {
+					805800: { disableSkill: true },
 					902: { speed: 1.15 },
 					911: { speed: 1.15 },
 					912: { speed: 1.15 },
@@ -1408,6 +1428,7 @@ module.exports = {
 		},
 		3: { // Healing Circle
 			0: {
+				abnormals: { 805800: { disableSkill: true } },
 				chains: {
 					19: 30,
 					26: 30,
@@ -1423,7 +1444,9 @@ module.exports = {
 			0: true
 		},
 		8: { // Mana Infusion
-			0: true
+			0: {
+				abnormals: { 805800: { disableSkill: true } }
+			}
 		},
 		10: { // Purifying Circle
 			0: true
@@ -1476,18 +1499,23 @@ module.exports = {
 			30: true
 		},
 		18: { // Heal Thyself
-			0: true
+			0: {
+				abnormals: { 805800: { disableSkill: true } }
+			}
 		},
 		19: { // Focus Heal
 			'*': { noRetry: true },
 			0: {
+				abnormals: { 805800: { disableSkill: true } },
 				type: 'lockon',
 				fixedSpeed: true
 			},
 			10: { type: 'lockonCast' }
 		},
 		22: { // Kaia's Shield
-			0: true
+			0: {
+				abnormals: { 805800: { disableSkill: true } }
+			}
 		},
 		25: { // Retaliate
 			0: { noRetry: true }
@@ -1549,10 +1577,16 @@ module.exports = {
 			10: { type: 'lockonCast' }
 		},
 		31: { // Guardian Sanctuary
-			0: { fixedSpeed: true }
+			0: {
+				abnormals: { 805800: { disableSkill: true } },
+				fixedSpeed: true
+			}
 		},
 		32: { // Divine Prayer
-			0: { fixedSpeed: true }
+			0: { 
+				abnormals: { 805800: { disableSkill: true } },
+				fixedSpeed: true
+			}
 		},
 		33: { // Ishara's Lulliby
 			'*': {
@@ -1575,6 +1609,7 @@ module.exports = {
 		},
 		37: { // Healing Immersion
 			'*': {
+				abnormals: { 805800: { disableSkill: true } },
 				fixedSpeed: true,
 				noRetry: true
 			},
@@ -1605,6 +1640,7 @@ module.exports = {
 		41: { // Divine Intervention / Mass Divine Intervention
 			'*': { noRetry: true },
 			0: {
+				abnormals: { 805800: { disableSkill: true } },
 				type: 'lockon',
 				fixedSpeed: true,
 				partyOnly: true
@@ -3512,7 +3548,7 @@ module.exports = {
 		},
 		8: { // Fire Avalanche
 			'*': {
-				abnormals: {
+				abnormals: { 
 					32033: { speed: 1.2 },
 					32058: { speed: 1.3 }
 				},
@@ -3611,7 +3647,8 @@ module.exports = {
 		21: { // Boomerang Shuriken
 			'*': {
 				hasChains: true,
-				noRetry: true
+				noRetry: true,
+				noInterrupt: [21]
 			},
 			0: { categoryChains: { 93003: 15 } },
 			11: { categoryChains: { 93003: 17 } },

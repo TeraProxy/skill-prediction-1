@@ -1,3 +1,10 @@
+### Do not use this
+This is a highly experimental fork of Pinkie Pie's original SP.  
+I do not provide any support for this. Use at your own risk.  
+  
+That being said, here is the rest of the readme:  
+  
+  
 :heart: [![Donate](https://img.shields.io/badge/Donate-PayPal-ff69b4.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=5MTKARBK2CNG8&lc=US&item_name=Pinkie%27s%20TERA%20Mods&currency_code=USD) :heart:
 
 ## Skill Prediction

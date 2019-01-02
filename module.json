@@ -1,0 +1,16 @@
+{
+    "disableAutoUpdate": false,
+    "name": "experimental-skill-prediction",
+    "author": "TeraProxy / Pinkie Pie / many others",
+    "description": "Simulates skills client-side, eliminating ping-based delays and animation lock.",
+    "options": {
+        "niceName": "ESP",
+        "guiName": "Experimental SP",
+        "settingsVersion": 4,
+        "settingsFile": "settings.json",
+        "settingsMigrator": "migration.js"
+    },
+    "servers": ["https://raw.githubusercontent.com/TeraProxy/skill-prediction-pinkie/experimental/"],
+    "supportUrl": "Sorry, no support.",
+    "conflicts": ["aa-zsync","cooldowns","cooldowns-master","fastfire","fastfire-master","fast-fire","fast-fire-master","lockons","lockons-master","lockons-light","lockons-light-master","ping-remover","skill-prediction-master","skill-prediction-plus"]
+}

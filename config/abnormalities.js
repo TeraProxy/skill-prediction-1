@@ -8,6 +8,7 @@ module.exports = {
 	301600: true,
 	301601: true,
 	301603: true,
+	301604: true,
 
 	/* Reaper */
 	// Spiral Barrage
