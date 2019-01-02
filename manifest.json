@@ -19,8 +19,7 @@
         "lib/require.js": "d8fcd57f21ba1cea3d474688c994804b21676c6a4cb6a9dbc4ed929c79a37dac",
         "migration.js": "e12e676368ac8bd2ae800cf9403a925bd12924dddd398aa2674e0cb5966377d2",
         "module.json": "5f5102924e2cf62b1033d53f06db06ff61799c74a0b4b0f3374300b202d11f5d",
-        "package.json": "f661f14ae53eeae6bdc3f0679f27ce4d336907649eca15eba6725703a01fb0a9",
-        "settings.json": "e3cf631b05c9d9ae4da1418d5b913350534691a2f2d94008ff4382424029eed5"
+        "package.json": "f661f14ae53eeae6bdc3f0679f27ce4d336907649eca15eba6725703a01fb0a9"
     },
     "defs": {
         "C_CANCEL_SKILL": 3,
